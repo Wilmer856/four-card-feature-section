@@ -1,0 +1,189 @@
+/* Universal styles */
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    overflow-y: hidden;
+}
+
+
+/* heading styles */
+
+.title-box {
+    text-align: center;
+    width: 50rem;
+    margin: 6.5rem auto 0 auto;
+}
+
+.title {
+    color: hsl(234, 12%, 34%);
+    font-size: 3rem;
+    font-weight: 200;
+    margin-bottom: 0;
+}
+
+.title-2 {
+    color: hsl(234, 12%, 34%);
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.title-description {
+    font-size: 1.5rem;
+    color: hsl(229, 6%, 66%);
+}
+
+
+/* end of heading styles */
+
+
+/* cards section styles */
+
+
+/* layout start */
+.cards {
+    display: grid;
+    padding: 0 2rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    grid-template-columns: repeat(3, minmax(23rem,40rem));
+    grid-template-rows: repeat(4, minmax(10rem,14rem));
+    grid-gap: 2rem;
+    width: fit-content;
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: hsla(212, 86%, 64%, .2) 0px 8px 24px;
+    padding: 0 3.8rem;
+}
+
+.card-1 {
+    border-top: 2px solid hsl(180, 62%, 55%);
+    grid-column: 1/2;
+    grid-row: 2/4;
+}
+
+.card-2 {
+    border-top: 2px solid hsl(0, 78%, 62%);
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
+.card-3 {
+    border-top: 2px solid hsl(34, 97%, 64%);
+    grid-column: 2/3;
+    grid-row: 3/-1;
+}
+
+.card-4 {
+    border-top: 2px solid hsl(212, 86%, 64%);
+    grid-column: 3/-1;
+    grid-row: 2/4;
+}
+
+/* layout end */
+
+/* card styles */
+
+.card-heading {
+    font-size: 2rem;
+}
+
+.card-description {
+    color: hsl(229, 6%, 66%);
+    font-size: 1.5rem;
+}
+
+.card-image {
+    padding-top: 6.5rem;
+    text-align: right;
+}
+
+.card-image img{
+    display: inline-block;
+}
+
+
+/* end of cards section styles */
+
+
+/* layouts for smaller screen sizes */
+
+@media  screen and (max-width: 875px) {
+
+    body {
+        overflow-y: visible;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(23rem,40rem));
+        grid-template-rows: repeat(2, minmax(10rem,30rem));
+    }
+    
+    .card-1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .card-2 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .card-3 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .card-4 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+}
+
+@media  screen and (max-width: 585px) {
+
+    .title-box {
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+
+    .title-box > h1, .title-box h2 {
+        font-size: 2.7rem;   
+    }
+    
+    .title-box > * {
+        padding: 0 0.53rem;
+    }
+
+    .cards {
+        grid-template-columns: repeat(1, minmax(23rem,40rem));
+        grid-template-rows: repeat(4, minmax(10rem,30rem));
+    }
+    
+    .card-1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .card-2 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .card-3 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .card-4 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+}
